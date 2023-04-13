@@ -213,6 +213,43 @@ describe('teste multiplicação',()=>{
             resultado=Calculadora.raizQuadrada(resultado)
             expect(resultado).to.be.equals(2.44948974278)
         })
+        it("sqrt {480 / { 20 . [ 86 - 12 . (5 + 2 ) ] ^ A }}  com resultado erro",()=>{
+            let resultado= Calculadora.soma(2,5)
+            resultado=Calculadora.multiplicacao(resultado,12)
+            resultado=Calculadora.subtracao(86,resultado)
+            resultado=Calculadora.potencia(resultado,'A')
+            resultado=Calculadora.multiplicacao(20,resultado)
+            resultado=Calculadora.divisao(480,resultado)
+            resultado=Calculadora.raizQuadrada(resultado)
+            expect(resultado).to.be.equals(erro1)
+        })
+        it("-(87 + 7 . 85 - 120) com resultado -562",()=>{
+            let resultado= Calculadora.multiplicacao(7,85)
+            resultado=Calculadora.soma(resultado,87)
+            resultado=Calculadora.subtracao(resultado,120)
+            resultado=Calculadora.inverterSinal(resultado)
+            expect(resultado).to.be.equals(-562)
+        })
+
+    })
+    describe('teste inverter sinal',()=>{
+        it("inverter sinal de 89 com resultado -89",()=>{
+            let resultado= Calculadora.inverterSinal(89)
+            expect(resultado).to.be.equals(-89)
+        })
+
+        it("inverter sinal de -7989 com resultado 7989",()=>{
+            let resultado= Calculadora.inverterSinal(-7989)
+            expect(resultado).to.be.equals(7989)
+        })
+        it("inverter sinal de A com resultado -A",()=>{
+            let resultado= Calculadora.inverterSinal('A')
+            expect(resultado).to.be.equals('-A')
+        })
+        it("inverter sinal de -B com resultado B",()=>{
+            let resultado= Calculadora.inverterSinal('-B')
+            expect(resultado).to.be.equals('B')
+        })
 
     })
 

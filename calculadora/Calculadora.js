@@ -45,6 +45,19 @@ export default class Calculadora{
             return Math.sqrt(x);
         }
     }
+
+    static inverterSinal(x){
+        if(verificarEntradaDeTexto(x,1)){
+            if (x.includes('-')){
+                return x.replace('-','');
+            }else{
+                return '-'+ x;
+            }
+            
+        }else{
+            return x*-1;
+        }
+    }
 }
 
 function verificarEntradaDeTexto(x,y){
