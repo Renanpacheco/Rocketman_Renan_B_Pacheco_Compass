@@ -23,6 +23,10 @@ describe('teste soma',()=>{
         let resultado= Calculadora.soma(-4,5)
         expect(resultado).to.be.equals(1)
     })
+    it("deve somar 45.467 + 5.155 com resultado 50.622", ()=>{
+        let resultado= Calculadora.soma(45.467,5.155)
+        expect(resultado).to.be.equals(50.622)
+    })
 
 
 })
@@ -52,6 +56,11 @@ describe('teste subtração',()=>{
         expect(resultado).to.be.equals(-9)
     })
 
+    it("deve subtrair 45.467 -5.155 com resultado 40.312", ()=>{
+        let resultado= Calculadora.subtracao(45.467,5.155)
+        expect(resultado).to.be.equals(40.312)
+    })
+
 
 })
 
@@ -77,6 +86,11 @@ describe('teste multiplicação',()=>{
     it("deve multiplicar -4 * 5 com resultado -20", ()=>{
         let resultado= Calculadora.multiplicacao(-4,5)
         expect(resultado).to.be.equals(-20)
+    })
+
+    it("deve multiplicação 45.467 * 5.155 com resultado 234,382385", ()=>{
+        let resultado= Calculadora.multiplicacao(45.467,5.155)
+        expect(resultado).to.be.equals(234.382385)
     })
 
     describe('teste divisão',()=>{
